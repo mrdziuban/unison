@@ -289,7 +289,9 @@ builtins0 = Map.fromList $
 
       , ("Sequence.empty", "[a]")
       , ("Sequence.cons", "a -> [a] -> [a]")
+      , ("Sequence.+:", "a -> [a] -> [a]")
       , ("Sequence.snoc", "[a] -> a -> [a]")
+      , ("Sequence.:+", "[a] -> a -> [a]")
       , ("Sequence.take", "Nat -> [a] -> [a]")
       , ("Sequence.drop", "Nat -> [a] -> [a]")
       , ("Sequence.++", "[a] -> [a] -> [a]")

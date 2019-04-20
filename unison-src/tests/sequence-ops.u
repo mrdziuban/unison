@@ -1,0 +1,20 @@
+use Sequence +: :+ ++
+
+prepend1 : [Nat] -> [Nat]
+prepend1 l = 1 +: l
+
+append2 : [Nat] -> [Nat]
+append2 l = l :+ 2
+
+concatl3 : [Nat] -> [Nat]
+concatl3 l = [3] ++ l
+
+concatr4 : [Nat] -> [Nat]
+concatr4 l = [4] ++ l
+
+> (
+  prepend1 [2],
+  append2 [3],
+  concatl3 [4],
+  concatr4 [5]
+)

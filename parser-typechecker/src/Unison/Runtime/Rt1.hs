@@ -271,7 +271,9 @@ builtinCompilationEnv = CompilationEnv (builtinsMap <> IR.builtins) mempty
       $ Sequence.lookup
       . fromIntegral
     , mk2 "Sequence.cons" at  ats (pure . Sequence) (Sequence.<|)
+    , mk2 "Sequence.+:"   at  ats (pure . Sequence) (Sequence.<|)
     , mk2 "Sequence.snoc" ats at  (pure . Sequence) (Sequence.|>)
+    , mk2 "Sequence.:+"   ats at  (pure . Sequence) (Sequence.|>)
     , mk2 "Sequence.take" atn ats (pure . Sequence) (Sequence.take . fromIntegral)
     , mk2 "Sequence.drop" atn ats (pure . Sequence) (Sequence.drop . fromIntegral)
     , mk2 "Sequence.++"   ats ats (pure . Sequence) (<>)
